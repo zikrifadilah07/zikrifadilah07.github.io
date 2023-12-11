@@ -1,25 +1,3179 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
+<!-- Mirrored from casting-mapping.netlify.app/map.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Dec 2023 06:42:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>login</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Google-Style-Login.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <meta http-equiv="refresh" content="5"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map - Casting Plant Monitoring System</title>
+        <link rel="icon" href="dist/img/Logo-Mini.png">
+        <link href="../cdn.jsdelivr.net/npm/bootstrap%405.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="plugins/tooltipster/dist/css/tooltipster.bundle.min.css">
+        <link rel="stylesheet" href="plugins/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css">
+        <link
+            rel="stylesheet"
+            href="../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <style type="text/css">
+            body{
+                background-color: #d9d9d9;
+            }
+            .custom-popover {
+                --bs-popover-max-width: 350px;
+                --bs-popover-border-color: rgba(142, 68, 173,1.0);
+                --bs-popover-header-bg: rgba(142, 68, 173,1.0);
+                --bs-popover-header-color: var(--bs-white);
+                --bs-popover-body-padding-x: 1rem;
+                --bs-popover-body-padding-y: .5rem;
+            }
+            .accordion {
+                --bs-accordion-bg: rgba(236, 240, 241,1.0);
+                --bs-accordion-color: rgba(45, 52, 54,1.0);
+                --bs-accordion-btn-bg: rgba(0, 206, 201,1.0);
+                --bs-accordion-active-bg: rgba(0, 206, 201,1.0);
+                --bs-accordion-active-color: rgba(45, 52, 54,1.0);
+                font-size: 14px;
+                text-align: center;
+            }
+            .accordion a{
+                text-decoration: none;
+                color: rgba(45, 52, 54,1.0);
+            }
+                .accordion a:hover{
+                    transition: all 0.5s ease;
+                    color: rgba(9, 132, 227,1.0);
+                }
+            area{
+                cursor: pointer;
+            }
+            
+            .modal-dialog{
+                margin-top: 5%;
+            }
+            .modal-header{
+                background: #00cec9;
+                color: #fff;
+                border: none;
+                padding: 15px 40px;
+                border-radius: none;
+            }
 
-<body>
-    <div class="login-card">
-        <h1 class="text-uppercase text-center">LOGIN</h1>
-        <p class="profile-name-card"> </p>
-        <form class="form-signin"><span class="reauth-email"> </span><input class="form-control" type="email" id="inputEmail" required="" placeholder="Email address" autofocus=""><input class="form-control" type="password" id="inputPassword" required="" placeholder="Password">
-            <div class="checkbox"></div><a class="btn btn-primary btn-lg d-block btn-signin w-100" role="button" href="https://casting-mapping.netlify.app/map.html">Login</a>
-        </form>
-    </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
+            .modal-body{
+                background: #2d3436;
+                color: #2d3436;
+                text-align: justify;
+                padding: 20px 40px;
+            }
 
+            .my-custom-theme {
+                border-radius: 5px; 
+                border: 2px solid #000;
+                background: #4c4c4c;
+                color: #fff;
+            }
+            /* Use this next selector to style things like font-size and line-height: */
+            .my-custom-theme .tooltipster-content {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 16px;
+                padding: 8px 10px;
+            }
+            .pict-header{
+                background:rgba(0, 206, 201,1.0); padding:12px 16px; font-weight: bold;
+            }
+
+            table.table-modif tr td{
+                color: #ecf0f1;
+            }
+
+            table.table-modif tr td:first-child{
+                --bs-table-bg: #00b894;
+                color: #2d3436;
+            }
+
+            table.table-modif tr td:first-child a{
+                text-decoration: none;
+                color: #0984e3;
+                transition: all 0.5s ease;
+            }
+
+                table.table-modif tr td:first-child a:hover{
+                    text-decoration: none;
+                    color: #74b9ff;
+                }
+            
+            table.table-modif .btn-success{
+                background-color: #b2bec3;
+                color: #2d3436;
+                border-color: #b2bec3;
+            }
+
+                table.table-modif .btn-success.active{
+                    background-color: #00b894;
+                    color: #2d3436;
+                    border-color: #00b894;
+                }
+
+            table.table-modif .btn-danger{
+                background-color: #b2bec3;
+                color: #2d3436;
+                border-color: #b2bec3;
+            }
+
+                table.table-modif .btn-danger.active{
+                    background-color: #d63031;
+                    color: #b2bec3;
+                    border-color: #d63031;
+                }
+
+            table.table-modif .btn-warning{
+                background-color: #b2bec3;
+                color: #2d3436;
+                border-color: #b2bec3;
+            }
+
+                table.table-modif .btn-warning.active{
+                    background-color: #fdcb6e;
+                    color: #2d3436;
+                    border-color: #fdcb6e;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center; padding: 30px 20px">
+                    <h1>Casting Plant Monitoring System</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <img id="map" src="dist/img/layout-casting-plant.jpg" usemap="#map-mask" style="width: 100%;"/>
+                    <map name="map-mask" id="objMap">
+                        <area 
+                            shape="poly" 
+                            coords="418,833,418,739,528,739,528,833" 
+                            data="description%201.html" 
+                            id="pic-1" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="521,610,553,610,553,717,521,717" 
+                            data="description%202.html" 
+                            id="pic-2" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iMinus</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>32 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Future</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Control Machine</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="474,587,553,587,553,508,532,508,532,470,490,470,490,508,474,508" 
+                            data="description%203.html" 
+                            id="pic-3" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iKuantum</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>128 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>-</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Loggin</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly"
+                            coords="542,833,542,739,654,739,654,833" 
+                            data="description%201b1.html" 
+                            id="pic-1b1" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="665,833,665,739,775,739,775,833" 
+                            data="description%201b2.html" 
+                            id="pic-1b2" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="638,610,675,610,675,717,638,717" 
+                            data="description%202b.html" 
+                            id="pic-2b" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iMinus</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>32 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Future</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Control Machine</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            
+                            coords="636,587,739,587,739,508,714,508,714,470,667,470,667,508,638,508" 
+                            data="description%203b.html" 
+                            id="pic-3b" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iKuantum</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>128 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>-</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Loggin</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly"
+                            coords="784,833,784,739,895,739,895,833" 
+                            data="description%201c1.html" 
+                            id="pic-1c1" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="902,833,902,739,1012,739,1012,833" 
+                            data="description%201c2.html" 
+                            id="pic-1c2" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="880,610,916,610,916,717,880,717" 
+                            data="description%202c.html" 
+                            id="pic-2c" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iMinus</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>32 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Future</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Control Machine</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="813,587,916,587,916,508,888,508,888,470,840,470,840,508,813,508" 
+                            data="description%203c.html" 
+                            id="pic-3c" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iKuantum</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>128 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>-</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Loggin</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly"
+                            coords="1021,833,1021,739,1127,739,1127,833" 
+                            data="description%201d.html" 
+                            id="pic-1d" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="995,610,1023,610,1023,717,995,717" 
+                            data="description%202d.html" 
+                            id="pic-2d" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iMinus</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>32 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Future</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Control Machine</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="997,587,1068,587,1068,508,1048,508,1048,470,1012,470,1012,508,997,508" 
+                            data="description%203d.html" 
+                            id="pic-3d" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iKuantum</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>128 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>-</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Loggin</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly"
+                            coords="1135,833,1135,739,1241,739,1241,833" 
+                            data="description%201e.html" 
+                            id="pic-1e" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1223,610,1263,610,1263,717,1223,717" 
+                            data="description%202e.html" 
+                            id="pic-2e" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iMinus</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>32 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Future</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Control Machine</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1162,587,1261,587,1261,508,1230,508,1230,470,1180,470,1180,508,1162,508" 
+                            data="description%203e.html" 
+                            id="pic-3e" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iKuantum</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>128 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>-</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Loggin</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly"
+                            coords="1266,833,1266,739,1382,739,1382,833" 
+                            data="description%201f.html" 
+                            id="pic-1f" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1362,490,1405,490,1405,717,1362,717" 
+                            data="description%202f.html" 
+                            id="pic-2f" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iMinus</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>32 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Future</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Control Machine</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1299,413,1398,413,1398,332,1373,332,1373,296,1322,296,1322,329,1299,329" 
+                            data="description%203f.html" 
+                            id="pic-3f" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iKuantum</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>128 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>-</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Loggin</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly"
+                            coords="1463,833,1463,739,1579,739,1579,833" 
+                            data="description%201g.html" 
+                            id="pic-1g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1597,833,1597,739,1714,739,1714,833" 
+                            data="description%202g.html" 
+                            id="pic-2g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1754,705,1754,775,1825,775,1825,705" 
+                            data="description%203g.html" 
+                            id="pic-3g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1467,630,1539,630,1539,591,1557,591,1557,543,1539,543,1539,514,1629,514,1629,452,1539,452,1539,302,1467,302" 
+                            data="description%204g.html" 
+                            id="pic-4g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1575,543,1575,591,1746,591,1746,543" 
+                            data="description%205g.html" 
+                            id="pic-5g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1801,440,1801,645,1871,645,1871,543,1844,543,1844,440" 
+                            data="description%206g.html" 
+                            id="pic-6g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1884,543,1884,591,1963,591,1963,543" 
+                            data="description%207g.html" 
+                            id="pic-7g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1969,543,1971,591,2056,591,2056,543" 
+                            data="description%208g.html" 
+                            id="pic-8g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="2063,543,2063,591,2202,591,2202,543" 
+                            data="description%209g.html" 
+                            id="pic-9g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1858,440,1858,486,2133,486,2133,440" 
+                            data="description%2010g.html" 
+                            id="pic-10g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly"
+                            coords="1884,807,2135,807,2135,673,1884,673,1884,723,2101,723,2101,757,1884,757" 
+                            data="description%2011g.html" 
+                            id="pic-11g" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly" 
+                            coords="333,10,333,237,860,237,860,10" 
+                            data="description%201h.html" 
+                            id="pic-1h" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="889,10,889,124,1759,124,1759,10" 
+                            data="description%202h.html" 
+                            id="pic-2h" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iMinus</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>32 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Future</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Control Machine</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="737,243,855,243,855,320,737,320" 
+                            data="description%203h.html" 
+                            id="pic-3h" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iKuantum</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>128 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>-</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Loggin</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="1073,181,1073,292,1252,292,1252,181" 
+                            data="description%204h.html" 
+                            id="pic-4h" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="1794,28,1810,228,1911,286,2019,240,2007,28,1902,0" 
+                            data="description%205h.html" 
+                            id="pic-5h" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly" 
+                            coords="6,335,248,335,248,93,96,93,96,219,6,219" 
+                            data="description%201i.html" 
+                            id="pic-1i" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly" 
+                            coords="198,428,198,477,279,518,338,486,333,459,257,394" 
+                            data="description%201j.html" 
+                            id="pic-1j" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="203,533,203,582,288,626,338,588,340,562,255,506" 
+                            data="description%202j.html" 
+                            id="pic-2j" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="199,638,199,686,284,730,338,697,338,665,261,607" 
+                            data="description%203j.html" 
+                            id="pic-3j" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            coords="194,741,194,786,275,829,335,799,329,761,255,705" 
+                            data="description%204j.html" 
+                            id="pic-4j" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+
+                        <area 
+                            shape="poly" 
+                            coords="28,1229,100,1190,96,1034,1,1068,1,1168,19,1184" 
+                            data="description%201k.html" 
+                            id="pic-1k" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                        <area 
+                            shape="poly" 
+                            disabled="true"
+                            coords="1911,1085,2005,1130,2005,1219,1978,1241,1978,1287,1906,1244" 
+                            data="description%202k.html" 
+                            id="pic-2k" 
+                            class="tooltip hover"
+                            title='
+                                <div class="row pict-header">
+                                    <div class="col-md-12">
+                                        Lorem Ipsum
+                                    </div>
+                                </div>
+                                <div style="width:100%; padding:8px 16px; font-size: 12px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Processor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Core iZero</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Ram
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>64 Gb</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Sensor
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>UV</b>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            Hidden
+                                        </div>
+                                        <div class="col-md-6">
+                                            <b>Lesser Beam</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            '
+                        />
+                    </map>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" id="modal-target">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header rounded-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">-</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right:-20px; top:-20px;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Operation
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="#" id="f1" data="#">Ongoing Operation</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#" id="f2" data="#">Operation Record</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="accordion accordion-flush" id="accordionFlushTwo">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Maintenance
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushTwo">
+                                            <div class="accordion-body">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="#" id="f3" data="#">Status and Trouble</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">Maintenance Schedule</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">Maintenance Record</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">Spare Part Information</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="accordion accordion-flush" id="accordionFlushThree">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Engineering
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushThree">
+                                            <div class="accordion-body">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="#">Technical Specs</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">Drawing info</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="accordion accordion-flush" id="accordionFlushFour">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingFour">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Asset Information
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushFour">
+                                            <div class="accordion-body">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="#">Asset information</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="#">Procurement Information</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-md fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" id="modal-target2">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header rounded-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">Ongoing Operation (MF-701)</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right:-20px; top:-20px;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <table class="table table-modif">
+                                    <tr>
+                                        <td>Status</td>
+                                        <td >
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-success active" id="mod2-on" data="#">ON</a>
+                                                <a href="#" class="btn btn-danger" id="mod2-off" data="#">OFF</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Setting Temperature</td>
+                                        <td><input type="text" class="form-control" id="mod2-temp" data="#"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actual Temperature</td>
+                                        <td>739 degC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Molten Type</td>
+                                        <td>Ingot G1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lot No.</td>
+                                        <td>22393</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Molten Quantity</td>
+                                        <td>20 ton</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LNG Consumption</td>
+                                        <td>xx NL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Energy Consumption</td>
+                                        <td>xx Joule</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">Temperature Graph</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">Chemical Data</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">Activity Status</a></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-md fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+            <div class="modal-dialog" id="modal-target3">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header rounded-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel3">Status and Trouble</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right:-20px; top:-20px;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <table class="table table-modif">
+                                    <tr>
+                                        <td>Status</td>
+                                        <td>
+                                            <div class="btn-group" id="mod3-status">
+                                                <a href="#" class="btn btn-success active" data="#">Running</a>
+                                                <a href="#" class="btn btn-warning" data="#">Maintenance</a>
+                                                <a href="#" class="btn btn-danger" data="#">Trouble</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Material Description</td>
+                                        <td>MELTING FURNANCE 1F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tag Sign</td>
+                                        <td id="mod3-name">MF-701</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Material Number</td>
+                                        <td>1311MF01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Functional Location</td>
+                                        <td>INL-ISP-013-001-001</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-lg fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" id="modal-target2">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header rounded-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">Aluminium Product</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right:-20px; top:-20px;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-primary" style="width: 100%; padding: 10px; background-color: #00cec9; border-color: #00cec9; color: #2d3436;" id="showStock">Stock</button>
+                            </div>
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-primary" style="width: 100%; padding: 10px; background-color: #00cec9; border-color: #00cec9; color: #2d3436;">Production</button>
+                            </div>
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-primary" style="width: 100%; padding: 10px; background-color: #00cec9; border-color: #00cec9; color: #2d3436;">Reject</button>
+                            </div>
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-primary" style="width: 100%; padding: 10px; background-color: #00cec9; border-color: #00cec9; color: #2d3436;">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-lg fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog" id="modal-target2">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header rounded-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">Aluminium Product</h1>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; right:-20px; top:-20px;"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="plugins/pictarea/pictarea.js"></script>
+        <script src="../cdn.jsdelivr.net/npm/%40popperjs/core%402.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="../cdn.jsdelivr.net/npm/bootstrap%405.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <script src="plugins/tooltipster/dist/js/tooltipster.bundle.js"></script>
+        <script src="plugins/chart.js/Chart.min.js"></script>
+        <script src="lib/js/data.js"></script>
+        <script>
+            $(function() {
+                let dHtml = ``;
+                data.forEach(function(objData){
+                    let stt = '';
+                    if(objData.status == 'OFF') stt = 'disabled="true"';
+                    if(objData.view == "A"){
+                        dHtml += `
+                            <area 
+                                shape="poly" 
+                                ${stt}
+                                coords="${objData.cordinate}" 
+                                id="${objData.id}" 
+                                class="tooltip hover"
+                                title='
+                                    <div class="row pict-header">
+                                        <div class="col-md-12">
+                                            ${objData.name}
+                                        </div>
+                                    </div>
+                                    <div style="width:100%; padding:8px 16px; font-size: 13px;">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Status
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b id="mStt-${objData.id}">${objData.status}</b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Type
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.type}</b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Temperature
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.temp} degC</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                '
+                            />
+                        `;
+                    }else if(objData.view == "B"){
+                        dHtml += `
+                            <area 
+                                shape="poly" 
+                                ${stt}
+                                coords="${objData.cordinate}" 
+                                id="${objData.id}" 
+                                class="tooltip hover"
+                                title='
+                                    <div class="row" style="padding:8px 16px; font-size: 14px;">
+                                        <div class="col-md-12">
+                                            ${objData.name}
+                                        </div>
+                                    </div>
+                                '
+                            />
+                        `;
+                    }else if(objData.view == "C"){
+                        dHtml += `
+                            <area 
+                                shape="poly" 
+                                ${stt}
+                                coords="${objData.cordinate}" 
+                                id="${objData.id}" 
+                                class="tooltip hover"
+                                title='
+                                    <div class="row pict-header">
+                                        <div class="col-md-12">
+                                            ${objData.name}
+                                        </div>
+                                    </div>
+                                    <div style="width:100%; padding:8px 16px; font-size: 13px;">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Status
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.status}</b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Type
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.type}</b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Temperature
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.temp} degC</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pict-header" style="background:rgba(0, 184, 148,1.0);">
+                                        <div class="col-md-12">
+                                            ${objData.name2}
+                                        </div>
+                                    </div>
+                                    <div style="width:100%; padding:8px 16px; font-size: 13px;">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Status
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.stt2}</b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Current
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.current}</b>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Temperature
+                                            </div>
+                                            <div class="col-md-6">
+                                                <b>${objData.temp2} degC</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                '
+                            />
+                        `;
+                    }
+                });
+                $("#objMap").html(dHtml);
+
+                $('#map').pictarea({
+                    rescaleOnResize: true,
+                    
+                    normal: {
+                        fillStyle:'rgba(223, 230, 233,0.4)',
+                        strokeStyle:'rgba(0, 206, 201,1.0)',
+                        lineWidth: 2
+                    },
+
+                    hover: {
+                        fillStyle:'rgba(129, 236, 236,.6)',
+                        strokeStyle:'rgba(0, 206, 201,1.0)',
+                        lineWidth: 2,
+                        shadowColor:'rgba(223, 230, 233,1.0)',
+                        shadowBlur: 10
+                    },
+                    active: {
+                        
+                    },
+                    disabled: {
+                        fillStyle:'rgba(255, 118, 117,.5)',
+                        strokeStyle:'rgba(214, 48, 49,1.0)',
+                        lineWidth: 2,
+                    }
+                });
+                $('#map').pictarea().on('enterArea.pictarea', function(evt) {
+                    var $area = $(evt.area),
+                    offset = $('#map').pictarea().offset(),
+                    top = evt.originalEvent.pageY - offset.top,
+                    left = evt.originalEvent.pageX - offset.left;
+                    // $('[data-bs-toggle="popover"]').popover({
+                    //     container: 'body',
+                    //     placement: 'top',
+                    //     trigger: 'hover',
+                    //     customClass: 'custom-popover',
+                    //     html: true
+                    // }).on('[class*="popover bs-popover-auto"]').attr('style', 'position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(' + (left) + 'px, '+ (top-10) +'px);');
+                })
+                // $('#map').pictarea().on('selectArea.pictarea',function(evt) {
+                //     // $('#exampleModal').modal('show');
+                    
+                // });
+                // $('[data-bs-toggle="popover"]').popover({
+                //     container: 'body',
+                //     placement: 'top',
+                //     trigger: 'hover',
+                //     customClass: 'custom-popover',
+                //     html: true
+                // }); 
+
+                $("[id*='PT-']").click(function(){
+                    let id = $(this).attr('id');
+                    let fObj = data.find(o => o.id == id);
+                    localStorage.setItem('id', fObj.id)
+                    window.open('https://hfinalum.glide.page/dl/b33482/s/4b6ef9', '_blank');
+                    // $("#exampleModalLabel").html(fObj.name);
+                    // $("[id*='f1']").attr('id', 'f1-' + id);
+                    // $("[id*='f2']").attr('id', 'f2-' + id);
+                    // $("[id*='f3']").attr('id', 'f3-' + id);
+                    // $('#exampleModal').modal('show');
+                });
+
+                $("[id*='PA-']").click(function(){
+                    let id = $(this).attr('id');
+                    let fObj = data.find(o => o.id == id);
+                    localStorage.setItem('id', fObj.id)
+                    // $("#exampleModalLabel").html(fObj.name);
+                    // $("[id*='f1']").attr('id', 'f1-' + id);
+                    // $("[id*='f2']").attr('id', 'f2-' + id);
+                    // $("[id*='f3']").attr('id', 'f3-' + id);
+                    $('#exampleModal4').modal('show');
+                });
+
+                $("[id*='f1']").click(function(){
+                    let getId = $(this).attr('id');
+                    getId = getId.substring(3, getId.length);
+                    let fObj = data.find(o => o.id == getId);
+                    $("#exampleModalLabel2").html("Ongoing Operation (" + fObj.name + ")");
+                    $("#mod2-temp").val(fObj.temp);
+                    $("#mod2-on").attr("data", getId);
+                    $("#mod2-off").attr("data", getId);
+                    $("#mod2-temp").attr("data", getId);
+                    if(fObj.status == "ON"){
+                        $("#mod2-on").attr("class", "btn btn-success active");
+                        $("#mod2-off").attr("class", "btn btn-danger");
+                    }else if(fObj.status == "OFF"){
+                        $("#mod2-on").attr("class", "btn btn-success");
+                        $("#mod2-off").attr("class", "btn btn-danger active");
+                    }
+                    $('#exampleModal2').modal('show');
+                });
+
+                $("[id*='f3']").click(function(){
+                    let getId = $(this).attr('id');
+                    getId = getId.substring(3, getId.length);
+                    let fObj = data.find(o => o.id == getId);
+                    if(fObj.status == "ON") {
+                        dHtml = `
+                            <a href="#" class="btn btn-success active" data="">Running</a>
+                            <a href="#" class="btn btn-warning" data="">Maintenance</a>
+                            <a href="#" class="btn btn-danger" data="">Trouble</a>
+                        `;
+                    }else if(fObj.status == "OFF") {
+                        dHtml = `
+                            <a href="#" class="btn btn-success" data="">Running</a>
+                            <a href="#" class="btn btn-warning" data="">Maintenance</a>
+                            <a href="#" class="btn btn-danger active" data="">Trouble</a>
+                        `;
+                    }
+                    $('#mod3-status').html(dHtml);
+                    $('#mod3-name').html(fObj.name);
+                    $('#exampleModal3').modal('show');
+                });
+
+                $("#mod2-temp").change(function(){
+                    let getVal = $(this).val();
+                    let dOn =  $(this).attr('data');
+                    let fObj = data.find(o => o.id == dOn);
+                    fObj.temp = getVal;
+                    if(fObj.view == "C"){
+                            dHtml = `
+                                        <div class="row pict-header">
+                                            <div class="col-md-12">
+                                                ${fObj.name}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.status}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Type
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.type}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pict-header" style="background:rgba(0, 184, 148,1.0);">
+                                            <div class="col-md-12">
+                                                ${fObj.name2}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.stt2}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Current
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.current}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp2}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                            `;
+                        }else if(fObj.view == "A"){
+                            dHtml = `
+                                        <div class="row pict-header">
+                                            <div class="col-md-12">
+                                                ${fObj.name}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.status}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Type
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.type}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                            `;
+                        }
+                        $("#" + dOn).tooltipster('content', dHtml);
+                });
+
+                $("#mod2-on").click(function(){
+                    let gClass = $(this).attr('class');
+                    if(gClass == "btn btn-success"){
+                        let dOn =  $("#mod2-on").attr('data');
+                        let fObj = data.find(o => o.id == dOn);
+                        fObj.status = "ON";
+                        $("#" + dOn).removeAttr('disabled');
+                        if(fObj.view == "C"){
+                            dHtml = `
+                                        <div class="row pict-header">
+                                            <div class="col-md-12">
+                                                ${fObj.name}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.status}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Type
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.type}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pict-header" style="background:rgba(0, 184, 148,1.0);">
+                                            <div class="col-md-12">
+                                                ${fObj.name2}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.stt2}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Current
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.current}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp2}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                            `;
+                        }else if(fObj.view == "A"){
+                            dHtml = `
+                                        <div class="row pict-header">
+                                            <div class="col-md-12">
+                                                ${fObj.name}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.status}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Type
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.type}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                            `;
+                        }
+                        $("#" + dOn).tooltipster('content', dHtml);
+                        $("#mod2-on").attr("class", "btn btn-success active");
+                        $("#mod2-off").attr("class", "btn btn-danger");
+                    }
+                });
+
+                $("#mod2-off").click(function(){
+                    let gClass = $(this).attr('class');
+                    if(gClass == "btn btn-danger"){
+                        let dOn =  $("#mod2-off").attr('data');
+                        let fObj = data.find(o => o.id == dOn);
+                        fObj.status = "OFF";
+                        $("#" + dOn).attr('disabled', 'true');
+                        if(fObj.view == "C"){
+                            dHtml = `
+                                        <div class="row pict-header">
+                                            <div class="col-md-12">
+                                                ${fObj.name}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.status}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Type
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.type}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row pict-header" style="background:rgba(0, 184, 148,1.0);">
+                                            <div class="col-md-12">
+                                                ${fObj.name2}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.stt2}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Current
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.current}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp2}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                            `;
+                        }else if(fObj.view == "A"){
+                            dHtml = `
+                                        <div class="row pict-header">
+                                            <div class="col-md-12">
+                                                ${fObj.name}
+                                            </div>
+                                        </div>
+                                        <div style="width:100%; padding:8px 16px; font-size: 14px;">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Status
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.status}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Type
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.type}</b>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Temperature
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <b>${fObj.temp}</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                            `;
+                        }
+                        $("#" + dOn).tooltipster('content', dHtml);
+                        $("#mod2-on").attr("class", "btn btn-success");
+                        $("#mod2-off").attr("class", "btn btn-danger active");
+                    }
+                });
+            
+                $('.tooltip.hover').tooltipster({
+                    trigger: 'hover',
+                    animation: 'grow',
+                    delay: 300,
+                    contentAsHTML: true,
+                    theme: 'tooltipster-punk'
+                });
+
+                var barChartDatas = {
+                    labels  : ['Ingot G1', 'Ingot S1-A', 'Ingot S1-B', 'Alloy A.356.2', 'Billey 6063', 'Billet 6005', 'Billet 6061'],
+                    datasets: [
+                        {
+                        label               : 'Stock',
+                        backgroundColor     : ['rgba(236, 240, 241,1.0)', 'rgba(236, 240, 241,1.0)', 'rgba(236, 240, 241,1.0)', 'rgba(236, 240, 241,1.0)', 'rgba(236, 240, 241,1.0)', 'rgba(230, 126, 34,1.0)', 'rgba(231, 76, 60,1.0)'],
+                        borderColor         : 'rgba(236, 240, 241,1.0)',
+                        pointRadius         : true,
+                        pointColor          : '#3b8bba',
+                        pointStrokeColor    : 'rgba(236, 240, 241,1.0)',
+                        pointHighlightFill  : '#fff',
+                        pointHighlightStroke: 'rgba(236, 240, 241,1.0)',
+                        data                : [7000, 300, 2000, 4000, 3000, 1500, 1000]
+                        },
+                        {
+                        label               : 'Safety Stock',
+                        backgroundColor     : 'rgba(52, 152, 219,1.0)',
+                        borderColor         : 'rgba(52, 152, 219,1.0)',
+                        pointRadius         : true,
+                        pointColor          : 'rgba(52, 152, 219,1.0)',
+                        pointStrokeColor    : '#c1c7d1',
+                        pointHighlightFill  : 'rgba(52, 152, 219,1.0)',
+                        pointHighlightStroke: 'rgba(52, 152, 219,1.0)',
+                        data                : [4000, 0, 1000, 3800, 2000, 1500, 2000]
+                        },
+                    ]
+                }
+                var barChartCanvas = $('#barChart').get(0).getContext('2d')
+                var barChartData = $.extend(true, {}, barChartDatas)
+                var temp0 = barChartDatas.datasets[0]
+                var temp1 = barChartDatas.datasets[1]
+                barChartData.datasets[0] = temp0
+                barChartData.datasets[1] = temp1
+
+                var barChartOptions = {
+                    responsive              : true,
+                    maintainAspectRatio     : false,
+                    datasetFill             : false
+                }
+
+                new Chart(barChartCanvas, {
+                    type: 'bar',
+                    data: barChartData,
+                    options: barChartOptions
+                })
+
+                $("#showStock").click(function(){
+                    $('#exampleModal5').modal('show');
+                });
+                
+            });
+        </script>
+    </body>
+
+<!-- Mirrored from casting-mapping.netlify.app/map.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Dec 2023 06:43:22 GMT -->
 </html>
